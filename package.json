@@ -1,0 +1,33 @@
+{
+  "name": "chartjs-image-exporter",
+  "version": "1.0.0",
+  "description": "Chart Js image exporter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./www/dist/src/index",
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register ./src/index.ts",
+    "prod": "tsc && node -r ts-node/register/transpile-only -r tsconfig-paths/register ./www/dist/index.js",
+    "clean": "rm -rf www/ || true",
+    "build": "npm run clean && npm run compile",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc -b tsconfig.json"
+  },
+  "keywords": [
+    "ChartJS"
+  ],
+  "author": "Md. Nazmus Saqib Khan",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bluebird": "^3.5.33",
+    "@types/node": "^16.18.39",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "chart.js": "^3.9.1",
+    "chartjs-node-canvas": "^4.1.6",
+    "ts-node": "^10.8.1",
+    "tsconfig-paths": "^4.1.1",
+    "ts-node-dev": "^2.0.0"
+  }
+}
