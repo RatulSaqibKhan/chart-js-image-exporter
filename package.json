@@ -4,14 +4,9 @@
   "description": "Chart Js image exporter",
   "main": "index.js",
   "scripts": {
-    "start": "node ./www/dist/src/index",
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register ./src/index.ts",
-    "prod": "tsc && node -r ts-node/register/transpile-only -r tsconfig-paths/register ./www/dist/index.js",
-    "clean": "rm -rf www/ || true",
-    "build": "npm run clean && npm run compile",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "tsc -b tsconfig.json"
+    "prod": "tsc && node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/index.js",
   },
   "keywords": [
     "ChartJS"
